@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    
+    <script type="module" crossorigin src="/team-project-js/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/team-project-js/assets/vendor-f89adc3e.js">
+    <link rel="modulepreload" crossorigin href="/team-project-js/assets/footer-modal-30a434b1.js">
+    <link rel="stylesheet" href="/team-project-js/assets/vendor-b342527d.css">
+    <link rel="stylesheet" href="/team-project-js/assets/footer-modal-2935e243.css">
+  </head>
+  <body>
+    <header class="header-section">
+  <div class="container header-container">
+    <nav class="main-nav">
+      <div class="logo-wrapper">
+        <a class="logo-link" href="./index.html">
+          <span class="header-logo-icon-wrap">
+            <svg class="header-logo-icon">
+              <use href="/team-project-js/assets/icons-5c405266.svg#logo-icon"></use>
+            </svg>
+          </span>
+          Food Boutique
+        </a>
+      </div>
+
+      <ul class="navig-wrapper list">
+        <li>
+          <a class="link-home" href="./index.html">Home</a>
+        </li>
+        <li class="header-basket">
+          <div class="header-besket-wrapper">
+            <a class="header-basket-item" href="./cart.html">
+              <span class="icon-basket-wrap">
+                <svg class="icon-basket-header">
+                  <use href="/team-project-js/assets/icons-5c405266.svg#shopping-cart-icon"></use>
+                </svg>
+              </span>
+              <span class="cart-amount">CART (<span
+                  class="js-header-cart-items js-object"
+                  data-jsname="headerCartNumber">0</span>)
+                  </span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <main>
+    <section class="cart-section">
+      <div class="container cart-total-container">
+        <!-- Title -->
+        <h1 class="visually-hidden">Section</h1>
+        <div class="cart-container">
+          <span class="wrapper-cart-icon">
+            <svg class="shopping-cart-icon" width="18" height="18">
+              <use href="/team-project-js/assets/icons-5c405266.svg#shopping-cart-icon"></use>
+            </svg>
+          </span>
+          <h2
+            class="cart-title js-object"
+            data-jsname="bigCartNumber"
+            id="cart-id"
+          >
+            CART (0)
+          </h2>
+        </div>
+        <!-- Empty basket -->
+        <div
+          class="cart-products-order-container js-object"
+          data-jsname="cartEmptyContainer"
+        >
+          <div class="cart-empty-product">
+            <picture>
+              <source
+                media="(min-width: 1440px)"
+                srcset="/team-project-js/assets/empty-basket@1x-9909cc93.png 1x, /team-project-js/assets/empty-basket@2x-1ab3be8c.png 2x"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/team-project-js/assets/empty-basket@1x-9909cc93.png 1x, /team-project-js/assets/empty-basket@1x-9909cc93.png 2x"
+              />
+
+              <source
+                media="(max-width: 767px)"
+                srcset="/team-project-js/assets/empty-basket@1x-9909cc93.png 1x, /team-project-js/assets/empty-basket@1x-9909cc93.png 2x"
+              />
+              <img
+                src="/team-project-js/assets/empty-basket@1x-9909cc93.png"
+                alt="empty cart"
+                class="cart-epmpty-img"
+              />
+            </picture>
+
+            <p class="cart-empty-title">
+              Your basket is <span class="cart-empty-item"> empty...</span>
+            </p>
+            <p class="cart-empty-text">
+              Go to the main page to select your favorite products and add
+              them to the cart.
+            </p>
+          </div>
+        </div>
+        <!-- Ful basket -->
+        <div
+          class="cart-box js-delete-all js-object"
+          data-jsname="deleteAllBtn"
+        >
+          <div class="cart-product-container">
+            <button type="button" class="cart-delete-button js-delete-all">
+              Delete all
+              <span class="cart-close-icon js-delete-all">
+                <svg
+                  class="cart-icon-close js-delete-all"
+                  width="24"
+                  height="24"
+                >
+                  <use href="/team-project-js/assets/icons-5c405266.svg#close-icon"></use>
+                </svg>
+              </span>
+            </button>
+
+            <!-- List of products -->
+            <ul
+              class="cart-products-list js-object"
+              data-jsname="cartContainer"
+            ></ul>
+          </div>
+          <!-- Your order  -->
+          <div class="cart-order-container">
+            <h2 class="order-title">your order</h2>
+
+            <div class="order-container">
+              <p class="order-text">Total</p>
+              <p class="order-text-sum">
+                Sum<span
+                  class="order-total-sum js-object"
+                  data-jsname="totalCartSum"
+                  >${12.95}</span
+                >
+              </p>
+            </div>
+
+            <form
+              class="order-form-checkout"
+              name="email_form"
+              novalidate
+              autocomplete="on"
+              action="submit"
+            >
+              <label class="order-form-lable">
+                <span class="order-text-span">Mail:</span>
+                <input
+                  class="order-form-input js-object"
+                  type="email"
+                  name="user-email"
+                  id="user-email"
+                  placeholder="Enter your email"
+                  data-jsname="cartEmail"
+                />
+              </label>
+              <button
+                class="order-checkout-button js-object"
+                data-jsname="buttonCheckout"
+                type="submit"
+              >
+                Checkout
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+ 
+    <footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-content-wrap">
+      <div class="footer-logo-social">
+        <a class="footer-logo-link" href="./index.html">
+          <span class="footer-logo-icon-wrap">
+            <svg class="footer-logo-icon">
+              <use href="/team-project-js/assets/icons-5c405266.svg#logo-icon"></use>
+            </svg>
+          </span>
+          Food Boutique
+        </a>
+        <ul class="footer-social-media-list">
+          <li class="social-media-item">
+            <a
+              class="social-media-link"
+              href=" https://www.facebook.com/goITclub/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook link"
+            >
+              <svg class="social-media-icon">
+                <use href="/team-project-js/assets/icons-5c405266.svg#facebook-icon"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="social-media-item">
+            <a
+              class="social-media-link"
+              href=" https://www.instagram.com/goitclub/ "
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram link"
+            >
+              <svg class="social-media-icon">
+                <use href="/team-project-js/assets/icons-5c405266.svg#instagram-icon"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="social-media-item">
+            <a
+              class="social-media-link"
+              href="https://www.youtube.com/c/GoIT"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Youtub link"
+            >
+              <svg class="social-media-icon">
+                <use href="/team-project-js/assets/icons-5c405266.svg#youtube-icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-main-info-wrap">
+        <div class="text-block">
+          <h2 class="footer-slogan-title">
+            Discover the Variety of Flavors and Quality
+          </h2>
+          <p class="footer-slogan">
+            An online store where you will find fresh, natural and delicious
+            products for a healthy life and unforgettable gastronomic
+            adventures.
+          </p>
+        </div>
+
+        <div class="subscription-wrap">
+          <p class="suscription-text">
+            Subscribe and learn about new products!
+          </p>
+
+          <form class="footer-form">
+            <div class="contact-form-box">
+              <input
+                type="email"
+                id="user-email"
+                name="email"
+                placeholder="Email"
+                class="contact-form-input"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                required
+              />
+
+              <button type="submit" class="footer-form-btn">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-policy-wrap">
+      <div>
+        <p class="footer-copywriting-text">
+          Food Boutique. All rights reserved.
+        </p>
+      </div>
+      <div class="footer-terms-wrap">
+        <p class="footer-privacy-policy-link">Privacy Policy</p>
+
+        <span class="footer-policy-dividion">/</span>
+
+        <p class="footer-terms-link">Terms of Service</p>
+      </div>
+    </div>
+  </div>
+  <div class="backdrop js-backdrop">
+    <div class="modal">
+      <button class="modal-btn js-close-modal">
+        <svg class="modal-btn-icon">
+          <use href="/team-project-js/assets/icons-5c405266.svg#close-icon"></use>
+        </svg>
+      </button>
+      <div class="modal-inner">
+        <h2>Вітаю шановний!</h2>
+        <p>
+          Ми дуже вдяіні що ви вирішила оформити підписку до нашого магазину,
+          але нажаль щось пішло не так. <br />
+          Проте, як тільки помилка вирішиться, ви зможите пидписатись! А поки
+          радимо вам задонатити копійку на ЗСУ!
+          <br />
+          З повагою, адміністрація!
+        </p>
+      </div>
+      <img
+        class="modal__food-basket"
+        src="/team-project-js/assets/Rectangle 2-6a8ff382.png"
+        alt="Кошик з фруктамі"
+      />
+    </div>
+  </div>
+</footer>
+
+    
+  </body>
+</html>
